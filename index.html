@@ -3,11 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    <div class="main-container">
-       <div class="header"></div>
-         <div class="body"> 
+       <div class="pw-header">
+           <div class="pass">
+            l823Zs78#Css09@
+               <button id="copy">Copy</button>
+           </div>
+       </div>
+         <div class="pw-body"> 
+            <div class="form-control">
+                <label for="length">Password Length</label>
+                    <input type="number"  id="length" min="4" max="35"/>
+                   </div>
              <div class="form-control">
                  <label for="upper">Contain Uppercase Letters</label>
                      <input type="checkbox" />
@@ -27,5 +37,6 @@
                                    </div>
          </div>
    </div>
+   <script src="script.js"></script>
 </body>
 </html>
