@@ -8,15 +8,15 @@
 <body>
    <div class="main-container">
        <div class="pw-header">
-           <div class="pass">
-            l823Zs78#Css09@
-               <button id="copy">Copy</button>
-           </div>
-       </div>
-         <div class="pw-body"> 
-            <div class="form-control">
-                <label for="length">Password Length</label>
-                    <input type="number"  id="length" min="4" max="35"/>
+           <div class="pass" id='pass'>
+           l823Zs78#Css09@
+           <button id="copy">Copy</button>
+        </div>
+    </div>
+    <div class="pw-body"> 
+        <div class="form-control">
+            <label for="length">Password Length</label>
+                    <input type="number" value="20"  id="length" min="4" max="35"/>
                    </div>
              <div class="form-control">
                  <label for="upper">Contain Uppercase Letters</label>
@@ -35,6 +35,7 @@
                                 <label for="symbols">Contain Symbols</label>
                                     <input type="checkbox" />
                                    </div>
+                    <button class="btn-generator" id="btn-generator">ButtonGenerator</button>
          </div>
    </div>
    <script src="script.js"></script>
