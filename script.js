@@ -1,5 +1,5 @@
 const pass = document.getElementById('pass')
-const copy = document.getElementById('copy')
+const copyEle = document.getElementById('copy')
 const length = document.getElementById('length')
 const upper = document.getElementById('upper')
 const lower = document.getElementById('lower')
@@ -86,5 +86,22 @@ function generateValue(){
     }
     return result;
 }
+const copyPassword =  () => {
+    const textarea = document.createElement("textarea");
+    const password = pass.innerText;
+
+    if (!password) {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    alert("Password copied to clipboard");
+};
+
+copyEle.addEventListener('click',copyPassword)
 
 generator.addEventListener('click',generatePassword)
