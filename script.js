@@ -64,14 +64,14 @@ function generatePassword(){
    }
 
    if(count===0){
-      return  pass.innerHTML=pass.textContent
+      return  "";
    }
     pass.innerHTML=password
   
 }
 
 function generateValue(){
-    let  result  ='';
+    let  result  =[];
     if(lower.checked){
         result += getLowerLetters()
     }
@@ -84,7 +84,7 @@ function generateValue(){
     if(symbol.checked){
         result +=getSymbols()
     }
-    return result;
+    return result[Math.floor(Math.random()*result.length)]
 }
 const copyPassword =  () => {
     const textarea = document.createElement("textarea");
